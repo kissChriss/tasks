@@ -46,4 +46,24 @@ The password for the next level is stored in the file data.txt and is the only l
 
 ## Bandit Level 9 → Level 10
 The password for the next level is stored in the file data.txt in one of the few human-readable strings, beginning with several ‘=’ characters.  
-**Answer:** 
+**Answer:** ```strings data.txt | grep =```
+
+## Bandit Level 10 → Level 11  
+The password for the next level is stored in the file data.txt, which contains base64 encoded data  
+**Answer:** ```base64 -d data.txt ```
+
+## Bandit Level 11 → Level 12  
+The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions  
+**Answer:** ```cat data.txt | tr '[a-z]' '[n-za-m]' | tr '[A-Z]' '[N-ZA-M]'```
+
+## Bandit Level 12 → Level 13  
+The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv (read the manpages!)  
+**Answer:**```cd /tmp/```  
+```mkdir tmp_folder```  
+```cd tmp_folder```  
+```...```  
+```xxd -r file > new_file```  
+```...``` 
+
+
+
