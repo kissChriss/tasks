@@ -54,7 +54,6 @@ if (isset ($_GET['password'])) {
 </body>
 </html>
 ```
-```
-https://regexp_pass.training.hackerdom.ru/?password=pass%00--  
-```
+Null Byte:
+```https://regexp_pass.training.hackerdom.ru/?password=pass%00--```
 
