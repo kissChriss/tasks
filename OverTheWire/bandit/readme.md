@@ -113,7 +113,6 @@ The password for the next level is stored in /etc/bandit_pass/bandit14 and can o
 ## Bandit Level 14 → Level 15  
 The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.  
 **Answer:**```nc -v localhost 30000```  
-```nc -v localhost 30000```  
 ```<password of the current level>```  
 
 ## Bandit Level 15 → Level 16  
