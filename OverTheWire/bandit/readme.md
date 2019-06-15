@@ -61,9 +61,14 @@ The password for the next level is stored in the file data.txt, which is a hexdu
 **Answer:**```cd /tmp/```  
 ```mkdir tmp_folder```  
 ```cd tmp_folder```  
-```...```  
-```xxd -r file > new_file```  
-```...``` 
+```cp /home/bandit12/data.txt /tmp/tmp_folder/data.txt```  
+```xxd -r data.txt > new_data```  
+```file new_data```   
+new_data: gzip compressed data, was "data2.bin", last modified: Tue Oct 16 12:00:23 2018, max compression, from Unix  
+```mv new_data new_data.gz```  
+```file new_data```  
+new_data: bzip2 compressed data, block size = 900k  
+```...```
 
 
 
