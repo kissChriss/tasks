@@ -68,7 +68,38 @@ new_data: gzip compressed data, was "data2.bin", last modified: Tue Oct 16 12:00
 ```mv new_data new_data.gz```  
 ```file new_data```  
 new_data: bzip2 compressed data, block size = 900k  
-```...```
+```mv new_data new_data.bz2```  
+```bzip2 -d new_data.bz2```  
+```file new_data```  
+new_data: gzip compressed data, was "data4.bin", last modified: Tue Oct 16 12:00:23 2018, max compression, from Unix  
+```mv new_data new_data.gz```  
+```gunzip -k new_data.gz```  
+```file new_data```  
+new_data: POSIX tar archive (GNU)  
+```mv new_data new_data.tar```  
+```tar -xvf new_data.tar```  
+```file data5.bin```  
+data5.bin: POSIX tar archive (GNU)  
+```mv data5.bin new_data1.tar```  
+```tar -xvf new_data1.tar```  
+```file data6.bin```  
+data6.bin: bzip2 compressed data, block size = 900k  
+```mv data6.bin new_data2.bz2```  
+```bzip2 -d new_data2.bz2```  
+```file new_data2```  
+new_data2: POSIX tar archive (GNU)  
+```mv new_data2 new_data2.tar```  
+```tar -xvf new_data2.tar```  
+```file data8.bin```  
+data8.bin: gzip compressed data, was "data9.bin", last modified: Tue Oct 16 12:00:23 2018, max compression, from Unix  
+```mv data8.bin data8.gz```  
+```gunzip -k data8.gz```  
+```file data8```  
+data8: ASCII text  
+```cat data8```
+
+
+
 
 
 
