@@ -31,9 +31,9 @@ strcmp("snlprintf\n", "__")
 
 ## Leviathan Level 6 → Level 7
 ```mkdir /tmp/new_tmp_folder/``` 
-```cd /tmp/new_tmp_folder/``` 
-```touch file```
-```vi file```  
+```cd /tmp/new_tmp_folder/```  
+```touch file```  
+```vi file```    
 ```#!/bin/bash 
 
 for i in {0000..9999}
