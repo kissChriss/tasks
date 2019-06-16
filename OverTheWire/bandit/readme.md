@@ -153,6 +153,29 @@ NOTE: Try connecting to your own network daemon to see if it works as you think
 2nd terminal: ```ssh bandit20@bandit.labs.overthewire.org -p 2220```  
 ```./suconnect 29999```  
 
+## Bandit Level 21 → Level 22  
+A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.  
+**Answer:** ```cd /etc/cron.d/```  
+```cat cronjob_bandit22```  
+```cat /usr/bin/cronjob_bandit22.sh```  
+```cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv```  
+
+## Bandit Level 22 → Level 23  
+A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.  
+NOTE: Looking at shell scripts written by other people is a very useful skill. The script for this level is intentionally made easy to read. If you are having problems understanding what it does, try executing it to see the debug information it prints.  
+**Answer:**```cd /etc/cron.d/```  
+```cat cronjob_bandit23```  
+```echo I am user bandit23 | md5sum | cut -d ' ' -f 1```  
+```cat /tmp/8ca319486bfbbc3663ea0fbe81326349```  
+
+## Bandit Level 23 → Level 24
+A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.  
+
+NOTE: This level requires you to create your own first shell-script. This is a very big step and you should be proud of yourself when you beat this level!  
+
+NOTE 2: Keep in mind that your shell script is removed once executed, so you may want to keep a copy around…  
+**Answer:**  
+
 
 
 
