@@ -174,7 +174,20 @@ A program is running automatically at regular intervals from cron, the time-base
 NOTE: This level requires you to create your own first shell-script. This is a very big step and you should be proud of yourself when you beat this level!  
 
 NOTE 2: Keep in mind that your shell script is removed once executed, so you may want to keep a copy around…  
-**Answer:**  
+**Answer:**```cd /var/spool/bandit24/```  
+```mkdir m0pk08k4/```  
+```vi m0pk08k4/script.sh```  
+```
+#!/bin/sh
+cat /etc/bandit_pass/bandit24 >> /var/spool/bandit24/m0pk08k4/pass
+```  
+
+```chmod 650 /m0pk08k4/script.sh```  
+```cp /m0pk08k4/script.sh /var/spool/bandit24/```  
+
+## Bandit Level 24 → Level 25  
+A daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, called brute-forcing.  
+
 
 
 
